@@ -7,7 +7,7 @@
           <!-- <li><router-link to="/admin"><i class="fa fa-user"></i> Admin</router-link></li> -->
         </ul>
         <ul class="nav__right list-inline">
-          <li><router-link to="/cart"><i class="fa fa-shopping-cart"></i> Cart ({{cartItemsCount}})</router-link></li>
+          <li><router-link to="/cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge badge-light badge-danger" v-if="cartItemsCount > 0">{{cartItemsCount}}</span></router-link></li>
           <li><product-search></product-search></li>
         </ul>
       </div>
@@ -281,5 +281,23 @@ export default {
     100% {
 
     }
+  }
+  .fa-star {
+    color:#DBC906;
+  }
+  .fa-shopping-cart{
+    font-size:20px;
+  }
+  .badge-danger {
+    background: red;
+    padding: 3px 7px;
+    font-size: 11px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+  }
+  .nav__right li:nth-child(1) a{
+    position: relative !important;
   }
 </style>

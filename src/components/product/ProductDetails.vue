@@ -1,5 +1,5 @@
 <template>
-  <div class="product-details">
+  <div class="product-details product-detail-thumbnail">
     <div class="full-width">
       <div class="row">
         <div
@@ -9,21 +9,25 @@
         </div>
         <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 product-details__info">
           <div class="product-details__description">
-            <small>{{ product && product.name }}</small>
-            <h3>{{ product.name }}</h3>
-            <p>
+            <small class="col-lg-12 col-md-12 col-sm-12 col-xs-12">{{ product && product.category }}</small>
+            <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">{{ product.name }}</h3>
+            <!-- <p>
               {{ product.category }}
-            </p>
+            </p> -->
           </div>
           <div class="product-details__price-cart">
-            <p><i class="fa fa-inr"></i>{{ product.price }}</p>
-            <ul class="list-inline">
+            <p class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <i class="fa fa-inr"></i>{{ product.price }}&nbsp; 
+              <small class="txt-line-through" v-if="product.discount > 0">{{checkdiscoutPrice(product)}}</small> <small v-if="product.discount > 0" class="product__price-dicountcart">
+               {{product.discount}}%</small>
+            </p>
+            <ul class="list-inline col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <li>
                 <button
                   class="btn btn-sm btn-default btn-round"
                   @click="deleteitem"
                 >
-                  -
+                  <i class="fa fa-minus"></i>
                 </button>
               </li>
               <li>
@@ -34,11 +38,11 @@
                   class="btn btn-sm btn-default btn-round"
                   @click="additem"
                 >
-                  +
+                  <i class="fa fa-plus"></i>
                 </button>
               </li>
             </ul>
-            <product-button :product="product"></product-button>
+            <product-button class="col-lg-4 col-md-4 col-sm-12 col-xs-12" :product="product"></product-button>
           </div>
         </div>
       </div>
@@ -71,6 +75,9 @@ export default {
     },
     getNumber (val) {
       return this.itemNumber.filter(function (value) { return value === val }).length
+    },
+    checkdiscoutPrice (item) {
+      return item.price + (item.price * ((item.discount ? item.discount : 0) / 100))
     }
   }
 }
@@ -88,7 +95,7 @@ export default {
 }
 
 .product-details__description {
-  padding-top: 30px;
+  padding-top: 0px;
 }
 
 .product-details__description small {
@@ -100,10 +107,12 @@ export default {
 }
 
 .product-details__price-cart {
-  display: flex;
+  display: block;
   padding-top: 30px;
 }
-
+.product-detail-thumbnail {
+border:1px solid lightgray;padding:10px;margin-top:10px;margin-bottom: 5px;
+}
 .product-details__price-cart p {
   flex-grow: 2;
   font-size: 20px;
