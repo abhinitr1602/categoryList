@@ -2,7 +2,7 @@
   "name": "ux",
   "version": "1.0.0",
   "description": "A Vue example",
-  "author": "Christian Nwamba <nwambachristian@gmail.com>",
+  "author": "Abhinit Roy <abhinitr@hcl.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

@@ -20,6 +20,9 @@ export const REMOVE_PRODUCT_FAILURE = 'REMOVE_PRODUCT_FAILURE'
 export const ADD_TO_CART = 'ADD_TO_CART'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 
+export const ADD_MORE = 'ADD_MORE'
+export const REMOVE_SELECTED = 'REMOVE_SELECTED'
+
 export const HIGH_TO_LOW = 'HIGH_TO_LOW'
 export const LOW_TO_HIGH = 'LOW_TO_HIGH'
 export const DISCOUNT = 'DISCOUNT'

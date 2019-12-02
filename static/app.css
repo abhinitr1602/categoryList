@@ -112,3 +112,28 @@ button.button.button-danger:hover {
   border-color: #FF3333;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 71, 71, 0.6);
 }
+.searchList {
+  padding: 3px;border-bottom:1px solid gray;cursor: pointer;
+}
+.searchList h6 {
+  color:#333;
+}
+.searchList a {
+  padding: 0px;
+}
+.pos-rel {
+  position: relative;
+}
+.min-ht {
+  min-height:90vh;
+}
+.productSearchedItem {
+    position: absolute;
+    float: left;
+    z-index: 9;
+    width: 100%;
+    background: #fff;
+}
+.txt-line-through {
+  text-decoration: line-through;
+}

@@ -16,6 +16,8 @@ import {
   DISCOUNT,
   ADD_TO_CART,
   REMOVE_FROM_CART,
+  ADD_MORE,
+  REMOVE_SELECTED,
   PRICE_RANGE,
   ALL_PRODUCTS,
   ALL_PRODUCTS_SUCCESS,
@@ -79,6 +81,12 @@ export const cartMutations = {
     const index = state.cart.findIndex(p => p._id === payload)
     state.cart.splice(index, 1)
     console.log(state.cart, state.cart.length, index)
+  },
+  [ADD_MORE]: (state, payload) => state.addedItems.push(payload),
+  [REMOVE_SELECTED]: (state, payload) => {
+    const index = state.addedItems.findIndex(p => p.price === payload.price)
+    state.addedItems.splice(index, 1)
+    console.log(state.addedItems, state.addedItems.length, index)
   }
 }
 

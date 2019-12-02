@@ -70,6 +70,7 @@ export default new Vuex.Store({
   strict: true,
   state: {
     cart: [],
+    addedItems: [],
     showLoader: false,
     product: {},
     products: [],

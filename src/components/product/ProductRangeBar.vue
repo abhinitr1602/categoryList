@@ -2,8 +2,8 @@
   <div class="d-flex justify-content-center my-4">
     <form class="range-field w-25 fullwidth">
       <ul class="list-inline fullwidth">
-        <li><span class="font-weight-bold indigo-text mr-2 mt-1">100</span></li>
-        <li style="width:67%;">
+        <li><span class="font-weight-bold indigo-text mr-2 mt-1"><i class="fa fa-inr"></i>100</span></li>
+        <li style="width:65%;">
           <input
             class="border-0"
             v-model="price"
@@ -13,7 +13,7 @@
           />
         </li>
         <li>
-          <span class="font-weight-bold indigo-text ml-2 mt-1">10000</span>
+          <span class="font-weight-bold indigo-text ml-2 mt-1"><i class="fa fa-inr"></i>10000</span>
         </li>
       </ul>
       <ul class="list-inline text-center col-lg-12" style="margin-top:5%;">

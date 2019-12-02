@@ -9,10 +9,10 @@
         <div class="product__description">
           <div class="product__info">
             <small>{{product.name}}</small>
-            <h4>{{product.name}}</h4>
-          </div>
-          <div class="product__price-cart">
-            <i class="fa fa-inr"></i>{{product.price}}
+            <h4><i class="fa fa-inr"></i> {{product.price}} <small class="txt-line-through" v-if="product.discount > 0">{{checkdiscoutPrice(product)}}</small> <small v-if="product.discount > 0" class="product__price-dicountcart">
+            <i class="fa fa-inr"></i>{{product.discount}}%
+            </small>
+            </h4>
           </div>
         </div>
       </router-link>
@@ -27,10 +27,20 @@
 <script>
   import ProductButton from './ProductButton.vue'
   export default {
+    data () {
+      return {
+        productImgUrl: '../../assets/tabFold_2.png'
+      }
+    },
     name: 'product-item',
     props: ['product'],
     components: {
       'product-button': ProductButton
+    },
+    methods: {
+      checkdiscoutPrice (item) {
+        return item.price + (item.price * ((item.discount ? item.discount : 0) / 100))
+      }
     }
   }
 </script>
@@ -105,7 +115,9 @@
     font-weight: bold;
     color: #51D2B7;
   }
-
+  .product__price-dicountcart {
+    color: #51D2B7 !important;
+  }
   .product__price-cart p {
     flex-grow: 2;
     font-size: 20px;
@@ -119,9 +131,7 @@
     width: 100%;
     transform: translateY(100%);
   }
-  .product__action button {
-    border-radius: 0;
-    width: 100%;
-    display: block;
+  .product__action div {
+    text-align:center;
   }
 </style>

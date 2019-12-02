@@ -6,12 +6,13 @@
           <li><router-link to="/"><i class="fa fa-star fa-3x"></i></router-link></li>
           <!-- <li><router-link to="/admin"><i class="fa fa-user"></i> Admin</router-link></li> -->
         </ul>
-        <ul class="nav__right">
+        <ul class="nav__right list-inline">
           <li><router-link to="/cart"><i class="fa fa-shopping-cart"></i> Cart ({{cartItemsCount}})</router-link></li>
+          <li><product-search></product-search></li>
         </ul>
       </div>
     </nav>
-    <router-view></router-view>
+    <router-view class="min-ht"></router-view>
     <nav class="full">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h6 class="text-center">@copyright</h6>
@@ -29,6 +30,7 @@
 
 <script>
 import toastr from 'toastr'
+import ProductSearch from './components/product/ProductSearch.vue'
 
 import {
   ERROR_MSG,
@@ -62,6 +64,9 @@ export default {
         }
       }
     })
+  },
+  components: {
+    'product-search': ProductSearch
   },
   computed: {
     cartItemsCount () {
