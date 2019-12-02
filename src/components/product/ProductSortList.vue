@@ -1,6 +1,6 @@
 <template>
   <div class="col-lg-12 col-md-12">
-    <ul class="nav nav-pills mb-3 list-inline" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills mb-3 list-inline lg-screen" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a
           class="nav-link active"
@@ -53,6 +53,30 @@
         >
       </li>
     </ul>
+    <div class="sm-screen custom-popup-overlay" v-if="ifSortClicked">
+      <div class="custom-popup">
+        <ul class="list-inline custom-filter">
+          <li>
+            <label class="radio">
+              <input type="radio" v-model="sortingValue" value="high" name="sort"/> Price - High Low
+            </label>
+          </li>
+          <li>
+            <label class="radio">
+              <input type="radio" v-model="sortingValue" value="low" name="sort"/> Price - Low High
+            </label>
+          </li>
+          <li>
+            <label class="radio">
+              <input type="radio" v-model="sortingValue" value="discount" name="sort"/> Discount
+            </label>
+          </li>
+          <li>
+            <div class="text-center"><button class="btn btn-primary btn-sm" @click="sortMobileitem()">Apply</button></div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -65,7 +89,9 @@ import {
 export default {
   data () {
     return {
-      linkVal: ''
+      linkVal: '',
+      sortingValue: 'high',
+      ifSortClicked: false
     }
   },
   methods: {
@@ -78,6 +104,17 @@ export default {
       } else {
         this.$store.commit(HIGH_TO_LOW, val)
       }
+    },
+    sortMobileitem () {
+      // this.linkVal = this.sortingValue
+      if (this.sortingValue === 'discount') {
+        this.$store.commit(DISCOUNT, this.sortingValue)
+      } else if (this.sortingValue === 'low') {
+        this.$store.commit(LOW_TO_HIGH, this.sortingValue)
+      } else {
+        this.$store.commit(HIGH_TO_LOW, this.sortingValue)
+      }
+      this.ifSortClicked = false
     }
   }
 }
@@ -89,5 +126,34 @@ export default {
 .nav-item a.active {
   color: #333;
   font-weight: bold;
+}
+.custom-popup {
+  margin: 0 auto;
+  max-width: 250px;
+  background: #fff;
+  overflow: hidden;
+  position: absolute;
+  padding: 10px;
+  top: 10vh;
+  z-index: 999;
+  left: 33.3%;
+}
+.custom-popup-overlay{
+  position: fixed;
+  float: left;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0,0,0,0.5);
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+}
+.custom-filter li {
+    float: left;
+    width: 100%;
+    padding: 5px;
+}
+.custom-filter li label{
+    padding-left: 10%;
 }
 </style>

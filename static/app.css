@@ -137,3 +137,37 @@ button.button.button-danger:hover {
 .txt-line-through {
   text-decoration: line-through;
 }
+.vr-line{
+  border-left:1px solid lightgray;height:100vh;float:left;width:0px;
+}
+@media screen and (min-width:320px) and ( max-width: 480px){
+  .lg-screen {
+    display: none;
+  } 
+   .vr-line {
+    display: none;
+  }
+  .sm-screen {
+    display: block;
+  }
+ }
+ @media screen and (min-width:768px) and ( max-width: 1024px){
+  .lg-screen {
+    display: none;
+  }
+   .vr-line {
+    display: none;
+   }
+ }
+ @media screen and (min-width:1224px){
+  .lg-screen {
+    display: block;
+  }
+  .sm-screen{
+    display: none;
+  }
+  .vr-line {
+    display: block;
+  }
+ }
+ 
