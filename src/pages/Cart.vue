@@ -85,13 +85,4 @@ export default {
   float: left;
   width: 100%;
 }
-.product-pricing{
-  padding: 10%;border:1px solid lightgray;margin-top:10px;
-}
-.tot-amnt {
-  padding-top:10px;border-top:1px solid lightgray;
-}
-.prc-amnt {
-  padding-bottom:10px;border-bottom:1px solid lightgray;
-}
 </style>

@@ -82,13 +82,11 @@ export const cartMutations = {
   [REMOVE_FROM_CART]: (state, payload) => {
     const index = state.cart.findIndex(p => p._id === payload)
     state.cart.splice(index, 1)
-    console.log(state.cart, state.cart.length, index)
   },
   [ADD_MORE]: (state, payload) => state.addedItems.push(payload),
   [REMOVE_SELECTED]: (state, payload) => {
     const index = state.addedItems.findIndex(p => p.price === payload.price)
     state.addedItems.splice(index, 1)
-    console.log(state.addedItems, state.addedItems.length, index)
   }
 }
 

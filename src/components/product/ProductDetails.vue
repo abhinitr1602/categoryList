@@ -83,39 +83,3 @@ export default {
 }
 </script>
 
-<style>
-.product-details {
-  border-bottom: 2px solid #f5f5f5;
-  padding: 30px 0;
-  float: left;
-  width: 100%;
-}
-
-.product-details__image {
-}
-
-.product-details__description {
-  padding-top: 0px;
-}
-
-.product-details__description small {
-  color: #808080;
-}
-
-.product-details__description h3 {
-  margin: 5px 0 30px 0;
-}
-
-.product-details__price-cart {
-  display: block;
-  padding-top: 30px;
-}
-.product-detail-thumbnail {
-border:1px solid lightgray;padding:10px;margin-top:10px;margin-bottom: 5px;
-}
-.product-details__price-cart p {
-  flex-grow: 2;
-  font-size: 20px;
-  font-weight: bold;
-}
-</style>

@@ -41,17 +41,4 @@ export default {
   }
 }
 </script>
-<style>
-.mg-top-15{
-    margin-top:15px;
-}
-.searchField input{
-    background: transparent;border: 0px;color:#fff;
-}
-.searchField{
-    border-bottom: 1.5px solid #fff;
-}
-.fa-search {
-    color:#fff;
-}
-</style>
+

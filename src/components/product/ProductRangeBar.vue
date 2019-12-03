@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex justify-content-center my-4">
-    <form class="range-field w-25 fullwidth lg-screen">
-      <h5 class="text-left">Filter By</h5>
-      <ul class="list-inline fullwidth">
+    <form class="range-field w-25 full lg-screen">
+      <h5 class="text-left"><b>Filter By</b></h5>
+      <ul class="list-inline full">
         <li><span class="font-weight-bold indigo-text mr-2 mt-1"><i class="fa fa-inr"></i>100</span></li>
         <li style="width:65%;">
           <input
@@ -17,7 +17,8 @@
           <span class="font-weight-bold indigo-text ml-2 mt-1"><i class="fa fa-inr"></i>10000</span>
         </li>
       </ul>
-      <ul class="list-inline text-center col-lg-12" style="margin-top:5%;">
+      <ul class="list-inline text-center col-lg-12">
+        <li class="full"><h6 class="text-center">Price</h6></li>
         <li>
           <button class="btn btn-round btn-primary btn-sm" @click="applyRange">
             Apply
@@ -28,8 +29,8 @@
     <div class="sm-screen custom-popup-overlay" v-if="isFilter">
       <div class="custom-popup range-modal">
         <h5 class="text-left"><b>Filter By</b></h5>
-        <form class="range-field w-25 fullwidth">
-          <ul class="list-inline fullwidth rangepopup">
+        <form class="range-field w-25 full">
+          <ul class="list-inline full rangepopup">
             <li><span class="font-weight-bold indigo-text mr-2 mt-1"><i class="fa fa-inr"></i>100</span></li>
             <li style="width:65%;">
               <input
@@ -45,6 +46,7 @@
             </li>
           </ul>
           <ul class="list-inline text-center col-lg-12 rangepopup" style="margin-top:5%;">
+            <li><h6 class="text-center">Price</h6></li>
             <li>
               <button class="btn btn-round btn-primary btn-sm" @click="applyRange">
                 Apply
@@ -85,7 +87,6 @@ export default {
 .fullwidth {
   float: left;
   width: 100%;
-  margin-top: 11%;
 }
 .btn-round {
   border-radius: 15px;

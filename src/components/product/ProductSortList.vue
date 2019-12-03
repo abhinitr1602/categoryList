@@ -124,41 +124,4 @@ export default {
   }
 }
 </script>
-<style>
-#pills-tab {
-  margin: 3% 0 3% 0;
-}
-.nav-item a.active {
-  color: #333;
-  font-weight: bold;
-}
-.custom-popup {
-  margin: 0 auto;
-  max-width: 250px;
-  background: #fff;
-  overflow: hidden;
-  position: absolute;
-  padding: 10px;
-  top: 10vh;
-  z-index: 999;
-  left: 33.3%;
-}
-.custom-popup-overlay{
-  position: fixed;
-  float: left;
-  width: 100%;
-  z-index: 999;
-  background: rgba(0,0,0,0.5);
-  left: 0;
-  top: 0;
-  min-height: 100vh;
-}
-.custom-filter li {
-    float: left;
-    width: 100%;
-    padding: 5px;
-}
-.custom-filter li label{
-    padding-left: 10%;
-}
-</style>
+
