@@ -4,6 +4,7 @@
     <!--enter-active-class="animated zoomIn"-->
   <!--&gt;-->
   <div class="container">
+    <h3>Product Description</h3>
     <product-details :product="product" :isAdding="true"></product-details>
   </div>
   <!--</transition>-->

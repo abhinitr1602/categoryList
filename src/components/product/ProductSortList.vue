@@ -55,6 +55,7 @@
     </ul>
     <div class="sm-screen custom-popup-overlay" v-if="isSorted">
       <div class="custom-popup">
+        <h4 class="ft-size-24"><b>Sort Options</b></h4>
         <ul class="list-inline custom-filter">
           <li>
             <label class="radio">
@@ -72,7 +73,7 @@
             </label>
           </li>
           <li>
-            <div class="text-center"><button class="btn btn-primary btn-sm" @click="sortMobileitem()">Apply</button></div>
+            <div class="text-center"><button class="btn btn-primary btn-lg" @click="sortMobileitem()">Apply</button></div>
           </li>
         </ul>
       </div>

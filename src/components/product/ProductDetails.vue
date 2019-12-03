@@ -1,4 +1,5 @@
 <template>
+<div class="full">
   <div class="product-details product-detail-thumbnail">
     <div class="full-width">
       <div class="row">
@@ -48,6 +49,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>

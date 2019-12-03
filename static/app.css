@@ -63,6 +63,9 @@ nav li a i  {
   padding: 10px 0;
   border-bottom: 2px solid #F5F5F5;
 }
+.ft-size-24 {
+  font-size: 24px;
+}
 .full{float:left;width:100%;}
 nav h6 {color:#fff;}
 button.button {
@@ -299,14 +302,14 @@ ul.list-inline.mobile-filter li {
 }
 .custom-popup {
   margin: 0 auto;
-  max-width: 250px;
+  max-width: 500px;
   background: #fff;
   overflow: hidden;
   position: absolute;
   padding: 10px;
   top: 10vh;
   z-index: 999;
-  left: 33.3%;
+  left: 25.3%;
 }
 .custom-popup-overlay{
   position: fixed;
@@ -324,7 +327,7 @@ ul.list-inline.mobile-filter li {
     padding: 5px;
 }
 .custom-filter li label{
-    padding-left: 10%;
+    padding-left: 10%;font-size:24px;color:#006cad;
 }
 .product-pricing{
   padding: 10%;border:1px solid lightgray;margin-top:10px;
@@ -592,7 +595,7 @@ ul.list-inline.mobile-filter li {
    float: left;width:100%;
  }
  .range-modal {
-   max-width:320px !important;width:100%;
+   max-width:500px !important;width:100%;
  }
  .range-modal form.range-field {
    margin-top:2% !important;

@@ -18,7 +18,7 @@
         </li>
       </ul>
       <ul class="list-inline text-center col-lg-12">
-        <li class="full"><h6 class="text-center">Price</h6></li>
+        <li class="full"><h6 class="text-center"><i class="fa fa-inr"></i>{{price}}</h6></li>
         <li>
           <button class="btn btn-round btn-primary btn-sm" @click="applyRange">
             Apply
@@ -28,10 +28,10 @@
     </form>
     <div class="sm-screen custom-popup-overlay" v-if="isFilter">
       <div class="custom-popup range-modal">
-        <h5 class="text-left"><b>Filter By</b></h5>
+        <h3 class="text-left"><b>Filter By</b></h3>
         <form class="range-field w-25 full">
           <ul class="list-inline full rangepopup">
-            <li><span class="font-weight-bold indigo-text mr-2 mt-1"><i class="fa fa-inr"></i>100</span></li>
+            <li><h4 class="font-weight-bold ft-size-24 indigo-text mr-2 mt-1"><i class="fa fa-inr"></i>100</h4></li>
             <li style="width:65%;">
               <input
                 class="border-0"
@@ -42,13 +42,13 @@
               />
             </li>
             <li>
-              <span class="font-weight-bold indigo-text ml-2 mt-1"><i class="fa fa-inr"></i>10000</span>
+              <h4 class="font-weight-bold ft-size-24 indigo-text ml-2 mt-1"><i class="fa fa-inr"></i>10000</h4>
             </li>
           </ul>
           <ul class="list-inline text-center col-lg-12 rangepopup" style="margin-top:5%;">
-            <li><h6 class="text-center">Price</h6></li>
+            <li class="full"><h4 class="text-center ft-size-24"><i class="fa fa-inr"></i>{{price}}</h4></li>
             <li>
-              <button class="btn btn-round btn-primary btn-sm" @click="applyRange">
+              <button class="btn btn-round btn-primary btn-lg" @click="applyRange">
                 Apply
               </button>
             </li>
