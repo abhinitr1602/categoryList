@@ -1,10 +1,13 @@
 <template>
   <div>
     <div class="products">
-      <div>
+      <div v-if="products && products.length > 0">
         <template v-for="product in products">
           <product-item :product="product"></product-item>
         </template>
+      </div>
+      <div v-else class="title">
+        <h1><i class="fa fa-superpowers"></i> No product found within this price range</h1>
       </div>
     </div>
   </div>

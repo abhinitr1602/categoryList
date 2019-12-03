@@ -28,9 +28,9 @@ export default {
     },
     filterItem () {
       console.log('hell')
-      var filterProduct = false
-      filterProduct = !filterProduct
-      this.$root.$emit('showFilter ', {showFilter: filterProduct})
+    //   var filterProduct = false
+    //   filterProduct = !filterProduct
+      this.$root.$emit('showFilter', {showFilter: true})
     }
   }
 }

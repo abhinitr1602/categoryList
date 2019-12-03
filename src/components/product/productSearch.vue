@@ -25,6 +25,9 @@ export default {
       displayedProduct: []
     }
   },
+  mounted () {
+    this.isSearch = window.screen.width <= 480
+  },
   computed: {
     filterInputSearchData () {
       return this.$store.getters.allProducts.filter(data => {

@@ -170,4 +170,15 @@ button.button.button-danger:hover {
     display: block;
   }
  }
- 
+ .rangepopup{
+   float: left;width:100%;
+ }
+ .range-modal {
+   max-width:320px !important;width:100%;
+ }
+ .range-modal form.range-field {
+   margin-top:2% !important;
+ }
+ .range-modal form.range-field ul:nth-child(1) {
+   margin-top:2%;
+ }
