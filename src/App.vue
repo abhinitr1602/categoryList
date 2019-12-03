@@ -6,7 +6,7 @@
           <li><router-link to="/"><i class="fa fa-star fa-2x"></i></router-link></li>
         </ul>
         <ul class="nav__right list-inline">
-          <li><router-link to="/cart"><i class="fa fa-shopping-cart"></i> <span class="badge badge-light badge-danger" v-if="cartItems.length > 0">{{cartItems.length}}</span></router-link></li>
+          <li><router-link to="/cart"><i class="fa fa-shopping-cart"></i> <span class="badge badge-light badge-danger" v-if="addedProducts > 0">{{addedProducts}}</span></router-link></li>
           <li><product-search></product-search></li>
         </ul>
       </div>

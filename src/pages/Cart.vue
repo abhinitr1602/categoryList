@@ -2,6 +2,7 @@
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <router-link to="/"><i class="fa fa-home"></i> Back to home</router-link>
     <div v-if="cart.length > 0">
+      <h3>Selected Product<span v-if="cart.length > 1">s</span></h3>
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
         <template v-for="product in addedProducts">
           <product-details
