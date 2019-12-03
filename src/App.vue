@@ -4,7 +4,6 @@
       <div class="container">
         <ul class="nav__left">
           <li><router-link to="/"><i class="fa fa-star fa-3x"></i></router-link></li>
-          <!-- <li><router-link to="/admin"><i class="fa fa-user"></i> Admin</router-link></li> -->
         </ul>
         <ul class="nav__right list-inline">
           <li><router-link to="/cart"><i class="fa fa-shopping-cart"></i> <span class="badge badge-light badge-danger" v-if="cartItemsCount > 0">{{cartItemsCount}}</span></router-link></li>

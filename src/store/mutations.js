@@ -16,6 +16,8 @@ import {
   DISCOUNT,
   ADD_TO_CART,
   REMOVE_FROM_CART,
+  SORTING_PRODUCT,
+  FILTER_PRODUCT,
   ADD_MORE,
   REMOVE_SELECTED,
   PRICE_RANGE,
@@ -104,6 +106,12 @@ export const sortMutations = {
       return b.price - a.price
     }
   }),
+  [SORTING_PRODUCT] (state, payload) {
+    state.showSort = payload
+  },
+  [FILTER_PRODUCT] (state, payload) {
+    state.showFilter = payload
+  },
   [LOW_TO_HIGH]: (state, payload) => state.products.sort(function (a, b) {
     console.log(payload)
     if (payload === 'low') {

@@ -23,6 +23,9 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const ADD_MORE = 'ADD_MORE'
 export const REMOVE_SELECTED = 'REMOVE_SELECTED'
 
+export const SORTING_PRODUCT = 'SORTING_PRODUCT'
+export const FILTER_PRODUCT = 'FILTER_PRODUCT'
+
 export const HIGH_TO_LOW = 'HIGH_TO_LOW'
 export const LOW_TO_HIGH = 'LOW_TO_HIGH'
 export const DISCOUNT = 'DISCOUNT'

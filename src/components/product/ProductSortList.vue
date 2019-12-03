@@ -53,7 +53,7 @@
         >
       </li>
     </ul>
-    <div class="sm-screen custom-popup-overlay" v-if="ifSortClicked">
+    <div class="sm-screen custom-popup-overlay" v-if="isSorted">
       <div class="custom-popup">
         <ul class="list-inline custom-filter">
           <li>
@@ -91,8 +91,13 @@ export default {
     return {
       linkVal: '',
       sortingValue: 'high',
-      ifSortClicked: false
+      isSorted: false
     }
+  },
+  created () {
+    this.$root.$on('showSort', (val) => {
+      this.isSorted = val.showSort
+    })
   },
   methods: {
     sortItem (val) {
@@ -114,7 +119,7 @@ export default {
       } else {
         this.$store.commit(HIGH_TO_LOW, this.sortingValue)
       }
-      this.ifSortClicked = false
+      this.isSorted = false
     }
   }
 }

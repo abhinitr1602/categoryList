@@ -2,12 +2,12 @@
   <div class="full">
     <div class="col-lg-12 col-md-12 ccol-sm-12 col-xs-12 brd-bottom">
       <ul class="list-inline mobile-filter">
-        <li>
+        <li @click="sortItem">
           <h4>
             <b><i class="fa fa-sort"></i> Sort</b>
           </h4>
         </li>
-        <li>
+        <li @click="filterItem">
           <h4>
             <b><i class="fa fa-filter"></i> Filter</b>
           </h4>
@@ -18,16 +18,19 @@
 </template>
 
 <script>
-import {
-    LOW_TO_HIGH
-  } from '../../store/mutation-types'
+
 export default {
   methods: {
     sortItem () {
-      this.$store.commit(LOW_TO_HIGH, this.sortingValue)
+      var sortproduct = false
+      sortproduct = !sortproduct
+      this.$root.$emit('showSort', {showSort: sortproduct})
     },
     filterItem () {
-      this.$store.commit(LOW_TO_HIGH, this.sortingValue)
+      console.log('hell')
+      var filterProduct = false
+      filterProduct = !filterProduct
+      this.$root.$emit('showFilter ', {showFilter: filterProduct})
     }
   }
 }
